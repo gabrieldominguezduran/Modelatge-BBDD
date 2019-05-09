@@ -111,38 +111,27 @@ Albuquerque	1997	11	-11.0000
 
 
 
-127.0.0.1/usairlineflights2/flights/		http://localhost/phpmyadmin/tbl_sql.php?db=usairlineflights2&table=flights
- Mostrando filas 0 - 24 (total de 255, La consulta tardó 0,0000 segundos.)
+127.0.0.1/usairlineflights2/flights/		http://localhost/phpmyadmin/db_sql.php?db=usairlineflights2
+ Mostrando filas 0 - 12 (total de 13, La consulta tardó 0,0000 segundos.)
 
-SELECT UniqueCarrier, colYear, colMonth, AVG(ArrDelay) as avgdelay, SUM(Cancelled) AS total_cancelled FROM flights GROUP by colMonth, colYear ORDER  BY total_cancelled DESC
+SELECT UniqueCarrier, colYear, colMonth, AVG(ArrDelay) as avgdelay, SUM(Cancelled) AS total_cancelled FROM flights WHERE Cancelled  > 0 GROUP by UniqueCarrier, colMonth, colYear ORDER  BY total_cancelled DESC
 
 
 UniqueCarrier	colYear	colMonth	avgdelay	total_cancelled   	
-AA	1988	1	29.5294	3	
-CO	1990	5	12.0556	1	
-UA	1989	2	12.6250	1	
-PI	1988	7	8.1667	1	
-EA	1989	5	6.0000	1	
-WN	1990	8	-1.5000	1	
-TW	1988	9	-0.1765	1	
-DL	1989	8	7.2353	1	
-US	1990	2	5.0769	1	
-UA	1987	11	7.2941	1	
-UA	1988	2	2.0625	1	
-HP	1987	12	16.8333	1	
-PI	1988	4	1.7059	1	
-OO	2004	4	-0.4348	0	
-CO	1991	6	-1.4706	0	
-MQ	2001	9	1.8889	0	
-HA	2007	9	31.6667	0	
-MQ	2004	9	-5.2083	0	
-YV	2006	2	19.0000	0	
-NW	1991	3	9.0000	0	
-CO	1997	3	6.3158	0	
-WN	2000	8	21.6500	0	
-AA	1996	10	10.9444	0	
-US	1992	12	11.0588	0	
-NW	2003	8	9.1818	0	
+DL	1988	1	16.0000	3	
+US	1987	12	6.0000	1	
+US	1990	8	-4.0000	1	
+UA	1990	2	33.0000	1	
+UA	1988	4	-1.0000	1	
+UA	1989	2	-17.0000	1	
+AS	1989	8	0.0000	1	
+TW	1987	11	10.0000	1	
+DL	1990	5	5.0000	1	
+CO	1988	2	15.0000	1	
+AS	1988	9	-10.0000	1	
+PI	1988	7	-2.0000	1	
+AA	1989	5	13.0000	1	
+	
 
 
 	
